@@ -1,4 +1,17 @@
-<!--index.wxml-->
-<view class="container" bindtap="test">
-Hello World
+<view class="container">
+  <view class="searchWrapper">
+    <mp-searchbar></mp-searchbar>
+  </view>
+
+  <view class="tabWrapper">
+    <view wx:for="{{tabTitles}}" class="tab {{index == curIndex ? 'tabSelected':''}}" data-index="{{index}}" wx:key="{{index}}" bindtap="tabHandler">{{item}}</view>
+  </view>
+
+  <view class="contentWrapper">
+    <view class="sideBar"></view>
+    <view class="dataWrapper">
+      <view class="info" wx:for="{{info}}" data-index="{{curIndex}}" wx:key="{{index}}">{{item}}</view>
+    </view>
+  </view>
+
 </view>

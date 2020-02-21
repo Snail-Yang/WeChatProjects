@@ -1,0 +1,37 @@
+.tabWrapper{
+  display: flex;
+  justify-content: space-around;
+  height: 65rpx;
+  padding-top: 15rpx;
+  border-top: solid 2rpx #aaaaaa;
+  border-bottom: solid 1rpx #dddddd;
+  font-size: 28rpx;
+  color: #7f7f7f;
+}
+
+.tab{
+  height: 45rpx;
+}
+
+.tabSelected{
+  border-bottom: solid 5rpx #3A9BD5;
+}
+
+.contentWrapper{
+  display: flex;
+}
+
+.contentWrapper .sideBar{
+  width: 25rpx;
+  background-color: #CD672F;
+}
+
+.dataWrapper{
+  flex-grow: 1;
+}
+
+.info{
+  /* flex-grow: 1; */
+  height: 205rpx;
+  border-bottom: solid 5rpx #e3e3e3;
+}
