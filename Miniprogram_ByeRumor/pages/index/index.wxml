@@ -10,7 +10,7 @@
   <view class="contentWrapper">
     <view class="sideBar"></view>
     <view class="dataWrapper">
-      <view class="info" wx:for="{{info}}" data-index="{{curIndex}}" wx:key="{{index}}">{{item}}</view>
+      <view class="info" wx:for="{{info}}" data-index="{{curIndex}}" wx:key="{{index}}" bindtap="enterDetail">{{item}}</view>
     </view>
   </view>
 

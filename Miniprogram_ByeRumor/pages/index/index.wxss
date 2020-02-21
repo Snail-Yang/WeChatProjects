@@ -26,11 +26,11 @@
   background-color: #CD672F;
 }
 
-.dataWrapper{
+.contentWrapper .dataWrapper{
   flex-grow: 1;
 }
 
-.info{
+.contentWrapper .dataWrapper .info{
   /* flex-grow: 1; */
   height: 205rpx;
   border-bottom: solid 5rpx #e3e3e3;
