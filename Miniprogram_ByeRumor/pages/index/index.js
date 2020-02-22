@@ -2,7 +2,9 @@ Page({
   data: {
     tabTitles: ["热门谣言", "防疫科普", "官方动态"],
     curIndex: 0,
-    info: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    rumors: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    science: ["S1", "S2", "S3", "S4", "S5", "S6", "S7", "S8"],
+    dynamic: ["D1", "D2", "D3", "D4", "D5", "D6", "D7", "D8"]
   },
   tabHandler(e){
     this.setData({
