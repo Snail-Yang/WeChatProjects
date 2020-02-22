@@ -2,10 +2,11 @@
   "pages": [
     "pages/index/index",
     "pages/quiz/quiz",
-    "pages/me/me",
+    "pages/profile/profile",
     "pages/hot_rumor/hot_rumor",
     "pages/antiepic_science/antiepic_science",
-    "pages/offic_dynamic/offic_dynamic"
+    "pages/offic_dynamic/offic_dynamic",
+    "pages/login/login"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
@@ -31,7 +32,7 @@
         "selectedIconPath": "icons/feeds-fill.png"
       },
       {
-        "pagePath": "pages/me/me",
+        "pagePath": "pages/profile/profile",
         "text": "我的",
         "iconPath": "icons/account.png",
         "selectedIconPath": "icons/account-fill.png"
