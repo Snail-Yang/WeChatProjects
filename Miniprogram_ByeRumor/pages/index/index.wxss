@@ -18,35 +18,41 @@
 }
 
 .contentWrapper{
-  display: flex;
-  flex-direction: column;
+  /* display: flex;
+  flex-direction: column; */
+  /* height: auto; */
 }
 
-.contentWrapper .dataWrapper{
+swiper-item{
+  /* height: 500rpx; */
+  /* overflow: visible; */
+}
+
+swiper .dataWrapper{
   display: flex;
 }
 
-.contentWrapper .dataWrapper .sideBar{
+swiper .dataWrapper .sideBar{
   width: 25rpx;
 }
 
-.contentWrapper .dataWrapper .ruBar{
+swiper .dataWrapper .ruBar{
 background-color: #CD672F;
 }
 
-.contentWrapper .dataWrapper .scBar{
+swiper .dataWrapper .scBar{
 background-color: #FACC48
 }
 
-.contentWrapper .dataWrapper .dyBar{
+swiper .dataWrapper .dyBar{
 background-color: #3499F7;
 }
 
-.contentWrapper .dataWrapper .infoWrapper{
+swiper .dataWrapper .infoWrapper{
   flex-grow: 1;
 }
 
-.contentWrapper .dataWrapper .infoWrapper .info{
+swiper .dataWrapper .infoWrapper .info{
   height: 205rpx;
   border-bottom: solid 5rpx #e3e3e3;
 }

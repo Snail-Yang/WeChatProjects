@@ -7,29 +7,33 @@
     <view wx:for="{{tabTitles}}" class="tab {{index == curIndex ? 'tabSelected':''}}" data-index="{{index}}" wx:key="{{index}}" bindtap="tabHandler">{{item}}</view>
   </view>
 
-  <view class="contentWrapper">
+    <swiper style="" current="{{curIndex}}" bindchange="curChange">
+      <swiper-item>
+        <view class="dataWrapper">
+          <view class="sideBar ruBar"></view>
+          <view class="infoWrapper">
+            <view class="info" wx:for="{{rumors}}" data-index="{{index}}" wx:key="{{index}}" bindtap="enterDetail">{{item}}</view>
+          </view>
+        </view>
+      </swiper-item>
 
-    <view class="dataWrapper" wx:if="{{curIndex===0}}">
-      <view class="sideBar ruBar"></view>
-      <view class="infoWrapper">
-        <view class="info" wx:for="{{rumors}}" data-index="{{index}}" wx:key="{{index}}" bindtap="enterDetail">{{item}}</view>
-      </view>
-    </view>
+      <swiper-item>
+        <view class="dataWrapper">
+          <view class="sideBar scBar"></view>
+          <view class="infoWrapper">
+            <view class="info" wx:for="{{science}}" data-index="{{index}}" wx:key="{{index}}" bindtap="enterDetail">{{item}}</view>
+          </view>
+        </view>
+      </swiper-item>
 
-    <view class="dataWrapper" wx:elif="{{curIndex===1}}">
-      <view class="sideBar scBar"></view>
-      <view class="infoWrapper">
-        <view class="info" wx:for="{{science}}" data-index="{{index}}" wx:key="{{index}}" bindtap="enterDetail">{{item}}</view>
-      </view>
-    </view>
-
-    <view class="dataWrapper" wx:else>
-      <view class="sideBar dyBar"></view>
-      <view class="infoWrapper">
-        <view class="info" wx:for="{{dynamic}}" data-index="{{index}}" wx:key="{{index}}" bindtap="enterDetail">{{item}}</view>
-      </view>
-    </view>
-
-  </view>
+      <swiper-item>
+        <view class="dataWrapper">
+          <view class="sideBar dyBar"></view>
+          <view class="infoWrapper">
+            <view class="info" wx:for="{{dynamic}}" data-index="{{index}}" wx:key="{{index}}" bindtap="enterDetail">{{item}}</view>
+          </view>
+        </view>
+      </swiper-item>
+    </swiper>
 
 </view>
