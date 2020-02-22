@@ -17,17 +17,6 @@
   border-bottom: solid 5rpx #3A9BD5;
 }
 
-.contentWrapper{
-  /* display: flex;
-  flex-direction: column; */
-  /* height: auto; */
-}
-
-swiper-item{
-  /* height: 500rpx; */
-  /* overflow: visible; */
-}
-
 swiper .dataWrapper{
   display: flex;
 }

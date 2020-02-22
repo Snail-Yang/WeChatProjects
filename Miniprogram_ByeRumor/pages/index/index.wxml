@@ -2,38 +2,43 @@
   <view class="searchWrapper">
     <mp-searchbar></mp-searchbar>
   </view>
-
   <view class="tabWrapper">
-    <view wx:for="{{tabTitles}}" class="tab {{index == curIndex ? 'tabSelected':''}}" data-index="{{index}}" wx:key="{{index}}" bindtap="tabHandler">{{item}}</view>
+    <view wx:for="{{tabTitles}}" class="tab {{index == curIndex ? 'tabSelected':''}}" data-index="{{index}}" wx:key="index" bindtap="tabHandler">{{item}}</view>
   </view>
 
-    <swiper style="" current="{{curIndex}}" bindchange="curChange">
-      <swiper-item>
+  <swiper style="height:{{clientHeight-searchHeight-tabHeight+'px'}}" current="{{curIndex}}" bindchange="curChange">
+    <swiper-item>
+      <scroll-view scroll-y="{{true}}" style="height:{{clientHeight-searchHeight-tabHeight+'px'}}">
         <view class="dataWrapper">
           <view class="sideBar ruBar"></view>
           <view class="infoWrapper">
-            <view class="info" wx:for="{{rumors}}" data-index="{{index}}" wx:key="{{index}}" bindtap="enterDetail">{{item}}</view>
+            <view class="info" wx:for="{{rumors}}" data-index="{{index}}" wx:key="index" bindtap="enterDetail">{{item}}</view>
           </view>
         </view>
-      </swiper-item>
+      </scroll-view>
+    </swiper-item>
 
-      <swiper-item>
+    <swiper-item>
+      <scroll-view scroll-y="{{true}}" style="height:{{clientHeight-searchHeight-tabHeight+'px'}}">
         <view class="dataWrapper">
           <view class="sideBar scBar"></view>
           <view class="infoWrapper">
-            <view class="info" wx:for="{{science}}" data-index="{{index}}" wx:key="{{index}}" bindtap="enterDetail">{{item}}</view>
+            <view class="info" wx:for="{{science}}" data-index="{{index}}" wx:key="index" bindtap="enterDetail">{{item}}</view>
           </view>
         </view>
-      </swiper-item>
+      </scroll-view>
+    </swiper-item>
 
-      <swiper-item>
+    <swiper-item>
+      <scroll-view scroll-y="{{true}}" style="height:{{clientHeight-searchHeight-tabHeight+'px'}}">
         <view class="dataWrapper">
           <view class="sideBar dyBar"></view>
           <view class="infoWrapper">
-            <view class="info" wx:for="{{dynamic}}" data-index="{{index}}" wx:key="{{index}}" bindtap="enterDetail">{{item}}</view>
+            <view class="info" wx:for="{{dynamic}}" data-index="{{index}}" wx:key="index" bindtap="enterDetail">{{item}}</view>
           </view>
         </view>
-      </swiper-item>
-    </swiper>
+      </scroll-view>
+    </swiper-item>
+  </swiper>
 
 </view>
