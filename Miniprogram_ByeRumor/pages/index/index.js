@@ -25,12 +25,16 @@ Page({
   },
 
   enterDetail() {
-    if (this.data.curIndex === 0) {
-      app.toHot_rumor();
-    } else if (this.data.curIndex === 1) {
-      app.toAntiepic_science();
-    } else {
-      app.toOffic_dynamic();
+    switch(this.data.curIndex) {
+      case 0:
+        app.toHot_rumor();
+        break;
+      case 1:
+        app.toAntiepic_science();
+        break;
+      case 2:
+        app.toOffic_dynamic();
+        break;
     }
   },
   /**
