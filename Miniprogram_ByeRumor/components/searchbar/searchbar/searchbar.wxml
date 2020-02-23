@@ -3,9 +3,9 @@
         <view class="weui-search-bar__box">
             <icon class="weui-icon-search_in-box" type="search" size="20"></icon>
             <input type="text" class="weui-search-bar__input" placeholder="{{placeholder}}" value="{{value}}" focus="{{focus}}" bindblur="inputBlur" bindfocus="inputFocus" bindinput="inputChange" />
-            <view class="weui-icon-clear" wx:if="{{value.length > 0}}" bindtap="clearInput">
+            <!-- <view class="weui-icon-clear" wx:if="{{value.length > 0}}" bindtap="clearInput">
                 <icon type="clear" size="12"></icon>
-            </view>
+            </view> -->
         </view>
         <!-- <label class="weui-search-bar__label" hidden="{{searchState}}" bindtap="showInput">
             <icon class="weui-icon-search" type="search" size="12"></icon>

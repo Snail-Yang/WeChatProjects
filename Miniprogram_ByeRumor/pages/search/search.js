@@ -6,7 +6,8 @@ Page({
   data: {
     searchValue: "",
     showHistory: true,
-    showSearching: false,
+    showSearch: false,
+    showResult: false,
     tabTitles: ["显示全部", "热门谣言", "防疫科普", "官方动态"],
     history: ["防疫种类", "防疫手段", "口罩", "酒精喷雾", "新增确诊", "国外疫情"],
     rankingList: ["99.7的无水乙醇可以稀释到75%后做消毒用",
@@ -20,7 +21,7 @@ Page({
       "99.7的无水乙醇可以稀释到75%后做消毒用",
       "99.7的无水乙醇可以稀释到75%后做消毒用"
     ],
-    
+
     clientHeight: "",
     searchHeight: "",
     tabHeight: "",
@@ -29,14 +30,15 @@ Page({
     science: app.data.science,
     dynamic: app.data.dynamic
   },
-  // 失去焦点页面事件
-  focusHandler(){
+  // 搜索历史页面事件
+  enterHistory() {
     this.setData({
-      showHistory: false,
-      showSearching: true,
+      showHistory: true,
+      showSearch: false,
+      showResult: false
     })
   },
-  selectHistory(e){
+  selectHistory(e) {
     const selectedValue = this.data.history[e.currentTarget.dataset.index];
     this.setData({
       searchValue: selectedValue,
@@ -47,8 +49,18 @@ Page({
       history: []
     })
   },
-  //获得焦点页面事件
-  tabHandler(e) {
+  //搜索输入页面事件
+  enterSearch() {
+    this.setData({
+      showHistory: false,
+      showSearch: true,
+      showResult: false
+    })
+  },
+  //搜索结果页面事件
+  //判断是否有搜索结果
+  
+  enterResult(e) {
     const self = this;
     //获取搜索栏高度
     app.getElementStyle(".searchWrapper", rect => {
@@ -64,18 +76,19 @@ Page({
     });
     //获取可用高度
     wx.getSystemInfo({
-      success: function (res) {
+      success: function(res) {
         self.setData({
           clientHeight: res.windowHeight
         });
-      },
+      }
     });
-    //获取当前index
+  },
+  //获取当前index
+  tabHandler(e) {
     this.setData({
       curIndex: e.currentTarget.dataset.index
     });
   },
-
   curChange(e) {
     this.setData({
       curIndex: e.detail.current

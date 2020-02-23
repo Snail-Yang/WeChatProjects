@@ -1,7 +1,8 @@
 <view class="container">
   <view class="searchWrapper">
-    <mp-searchbar placeholder="输入要搜索的内容" value="{{searchValue}}" bindfocus="focusHandler"></mp-searchbar>
+    <mp-searchbar placeholder="输入要搜索的内容" value="{{searchValue}}" bindfocus="enterSearch" bindblur="enterHistory"></mp-searchbar>
   </view>
+  <!-- 搜索历史页面 -->
   <view wx:if="{{showHistory}}">
     <view class="historyWrapper">
       <view class="historyTitle">
@@ -20,8 +21,12 @@
       </view>
     </view>
   </view>
-
-  <view wx:if="{{showSearching}}">
+<!-- 搜索输入页面 -->
+<view wx:if="{{showSearch}}">
+Searching Page
+</view>
+<!-- 搜索结果页面 -->
+  <view wx:if="{{showResult}}">
     <view class="tabWrapper">
       <view wx:for="{{tabTitles}}" class="tab {{index == curIndex ? 'tabSelected':''}}" data-index="{{index}}" wx:key="index" bindtap="tabHandler">{{item}}</view>
     </view>
