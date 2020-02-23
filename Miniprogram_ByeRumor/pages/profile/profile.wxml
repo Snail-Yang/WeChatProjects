@@ -1,12 +1,14 @@
 <!--pages/me/me.wxml-->
 <view class="profile-container">
-  <navigator url="/pages/login/login.wxml" class="profile-login">
+  <view class="profile-login" bindtap="goToLogin">
     <view class="login-pic">
-      <icon class="icon iconfont icon-user"></icon>
+      <icon class="icon iconfont icon-user">
+        <image src="{{userinfo.avatarUrl}}"></image>
+      </icon>
     </view>
-    <text>未登陆</text>
+    <text class="profile-name">{{userName}}</text>
     <icon class="icon iconfont icon-youjiantou"></icon>
-  </navigator>
+  </view>
   <view class="my-collection">
     <text>我的收藏</text>
     <icon class="icon iconfont icon-youjiantou"></icon>
