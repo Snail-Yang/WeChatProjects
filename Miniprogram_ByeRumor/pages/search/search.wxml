@@ -1,22 +1,15 @@
 <view class="container">
   <view class="searchWrapper">
-    <mp-searchbar placeholder="输入要搜索的内容"></mp-searchbar>
+    <mp-searchbar placeholder="输入要搜索的内容" value="{{searchValue}}" bindfocus="focusHandler"></mp-searchbar>
   </view>
-
-  <view wx:if="{{false}}">
-    <view class="tabWrapper">
-      <view wx:for="{{tabTitles}}" class="tab {{index == curIndex ? 'tabSelected':''}}" data-index="{{index}}" wx:key="index" bindtap="tabHandler">{{item}}</view>
-    </view>
-  </view>
-
-  <view>
+  <view wx:if="{{showHistory}}">
     <view class="historyWrapper">
       <view class="historyTitle">
         <text class="titleText">搜索记录</text>
         <text class="titleBtn" bindtap="deleteAll">全部删除</text>
       </view>
       <view class="historyItems">
-        <view wx:for="{{history}}" wx:key="index" data-index="{{index}}">{{item}}</view>
+        <view wx:for="{{history}}" wx:key="index" data-index="{{index}}" bindtap="selectHistory">{{item}}</view>
       </view>
     </view>
     <view class="rankingWrapper">
@@ -26,6 +19,60 @@
         <view class="rankingItem">{{item}}</view>
       </view>
     </view>
+  </view>
+
+  <view wx:if="{{showSearching}}">
+    <view class="tabWrapper">
+      <view wx:for="{{tabTitles}}" class="tab {{index == curIndex ? 'tabSelected':''}}" data-index="{{index}}" wx:key="index" bindtap="tabHandler">{{item}}</view>
+    </view>
+
+    <swiper style="height:{{clientHeight-searchHeight-tabHeight+'px'}}" current="{{curIndex}}" bindchange="curChange">
+
+      <swiper-item>
+        <scroll-view scroll-y="{{true}}" style="height:{{clientHeight-searchHeight-tabHeight+'px'}}">
+          <view class="dataWrapper">
+            <view class="info" wx:for="{{rumors}}" data-index="{{index}}" wx:key="index" bindtap="enterDetail">
+              <view class="sideBar ruBar"></view>
+              <view class="infoItem">{{item.content}}</view>
+            </view>
+          </view>
+        </scroll-view>
+      </swiper-item>
+
+      <swiper-item>
+        <scroll-view scroll-y="{{true}}" style="height:{{clientHeight-searchHeight-tabHeight+'px'}}">
+          <view class="dataWrapper">
+            <view class="info" wx:for="{{rumors}}" data-index="{{index}}" wx:key="index" bindtap="enterDetail">
+              <view class="sideBar ruBar"></view>
+              <view class="infoItem">{{item.content}}</view>
+            </view>
+          </view>
+        </scroll-view>
+      </swiper-item>
+
+      <swiper-item>
+        <scroll-view scroll-y="{{true}}" style="height:{{clientHeight-searchHeight-tabHeight+'px'}}">
+          <view class="dataWrapper">
+            <view class="info" wx:for="{{science}}" data-index="{{index}}" wx:key="index" bindtap="enterDetail">
+              <view class="sideBar scBar"></view>
+              <view class="infoItem">{{item.content}}</view>
+            </view>
+          </view>
+        </scroll-view>
+      </swiper-item>
+
+      <swiper-item>
+        <scroll-view scroll-y="{{true}}" style="height:{{clientHeight-searchHeight-tabHeight+'px'}}">
+          <view class="dataWrapper">
+            <view class="info" wx:for="{{dynamic}}" data-index="{{index}}" wx:key="index" bindtap="enterDetail">
+              <view class="sideBar dyBar"></view>
+              <view class="infoItem">{{item.content}}</view>
+            </view>
+          </view>
+        </scroll-view>
+      </swiper-item>
+    </swiper>
+
   </view>
 
 </view>
