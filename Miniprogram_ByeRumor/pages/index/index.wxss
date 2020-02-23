@@ -11,7 +11,7 @@
   height: 60rpx;
   border: solid 2rpx #ddd;
   border-radius: 6rpx;
-  padding: 0 20rpx 0 38rpx;
+  padding: 0 28rpx 0 28rpx;
   color: #aaa;
   font-size: 28rpx;
 }

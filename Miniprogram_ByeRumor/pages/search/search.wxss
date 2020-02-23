@@ -11,3 +11,40 @@
 .tab {
   height: 30rpx;
 }
+
+.historyWrapper {
+  border-top: solid 2rpx #bbbbbb;
+  border-bottom: solid 2rpx #bbbbbb;
+}
+
+.historyWrapper .historyTitle {
+  display: flex;
+  justify-content: space-between;
+  padding: 12rpx 22rpx;
+}
+
+.historyWrapper .historyTitle .titleText {
+  font-size: 28rpx;
+}
+
+.historyWrapper .historyTitle .titleBtn {
+  font-size: 24rpx;
+}
+
+.historyWrapper .historyItems{
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 16rpx;
+}
+
+.historyWrapper .historyItems view{
+  height: 50rpx;
+  margin-right: 16rpx;
+  margin-bottom: 10rpx;
+  padding: 6rpx 48rpx;
+  border-radius: 50rpx;
+  background-color: #f2f2f2;
+  line-height: 50rpx;
+  text-align: center;
+  font-size: 24rpx;
+}

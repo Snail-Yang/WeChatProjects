@@ -39,8 +39,8 @@
 
 .weui-search-bar__box {
   position: relative;
-  padding-left: 38rpx;
-  padding-right: 32px;
+  padding-left: 30rpx;
+  padding-right: 32rpx;
   width: 100%;
   box-sizing: border-box;
   z-index: 1;

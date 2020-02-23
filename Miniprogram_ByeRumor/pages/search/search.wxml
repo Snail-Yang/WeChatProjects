@@ -2,7 +2,24 @@
   <view class="searchWrapper">
     <mp-searchbar placeholder="输入要搜索的内容"></mp-searchbar>
   </view>
-  <view class="tabWrapper">
-    <view wx:for="{{tabTitles}}" class="tab {{index == curIndex ? 'tabSelected':''}}" data-index="{{index}}" wx:key="index" bindtap="tabHandler">{{item}}</view>
+
+  <view wx:if="{{false}}">
+    <view class="tabWrapper">
+      <view wx:for="{{tabTitles}}" class="tab {{index == curIndex ? 'tabSelected':''}}" data-index="{{index}}" wx:key="index" bindtap="tabHandler">{{item}}</view>
+    </view>
   </view>
+
+  <view>
+    <view class="historyWrapper">
+      <view class="historyTitle">
+        <text class="titleText">搜索记录</text>
+        <text class="titleBtn" bindtap="deleteAll">全部删除</text>
+      </view>
+      <view class="historyItems">
+        <view wx:for="{{history}}" wx:key="index" data-index="{{index}}">{{item}}</view>
+      </view>
+    </view>
+    <view class="rankingList"></view>
+  </view>
+
 </view>
