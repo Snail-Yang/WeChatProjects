@@ -2,9 +2,8 @@
 <view class="profile-container">
   <view class="profile-login" bindtap="goToLogin">
     <view class="login-pic">
-      <icon class="icon iconfont icon-user">
-        <image src="{{userinfo.avatarUrl}}"></image>
-      </icon>
+      <icon  class="icon iconfont icon-user"></icon>
+      <image src="{{userinfo.avatarUrl}}"></image>
     </view>
     <text class="profile-name">{{userName}}</text>
     <icon class="icon iconfont icon-youjiantou"></icon>

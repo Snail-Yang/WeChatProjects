@@ -19,15 +19,27 @@ Page({
   onShow: function () {
     const userinfo = wx.getStorageSync("userinfo");
     this.setData({userinfo});
-    // console.log(this.data.userName)
-    if (userinfo && userinfo.length !== 0) {
-      this.data.userName = userinfo.nickName
+  },
+  /**
+ * 生命周期函数--监听页面初次渲染完成
+ */
+  onReady: function () {
+    console.log(this.data.userinfo)
+    if (this.data.userinfo && this.data.userinfo.length !== 0) {
+      this.setData({
+        userName: this.data.userName = this.data.userinfo.nickName
+      })
     } else {
-      this.data.userName = "未登录"
+      this.setData({
+        userName: this.data.userName = "未登录"
+      })
     }
     console.log(this.data.userName)
   },
   /**
    * 生命周期函数--监听页面加载
    */
+  onLoad: function(){
+
+  }
 })
