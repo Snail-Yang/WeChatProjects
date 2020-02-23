@@ -19,7 +19,13 @@
         <view wx:for="{{history}}" wx:key="index" data-index="{{index}}">{{item}}</view>
       </view>
     </view>
-    <view class="rankingList"></view>
+    <view class="rankingWrapper">
+      <view class="titleText">谣言排行榜</view>
+      <view wx:for="{{rankingList}}" class="rankingList" wx:key="index" data-index="{{index}}">
+        <view class="rankingNum">{{index+1}}</view>
+        <view class="rankingItem">{{item}}</view>
+      </view>
+    </view>
   </view>
 
 </view>

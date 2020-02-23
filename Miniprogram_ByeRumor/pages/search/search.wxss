@@ -48,3 +48,24 @@
   text-align: center;
   font-size: 24rpx;
 }
+
+.rankingWrapper .titleText{
+  padding: 12rpx 22rpx;
+}
+
+.rankingWrapper .rankingList{
+  display: flex;
+  padding: 12rpx 22rpx;
+  border-bottom: solid 2rpx #bbbbbb;
+  font-size: 31rpx;
+}
+
+.rankingWrapper .rankingList .rankingNum{
+  width: 40rpx;
+  height: 40rpx;
+  background-color: red;
+  text-align: center;
+  line-height: 40rpx;
+  margin-right: 60rpx;
+  color: #ffffff;
+}
