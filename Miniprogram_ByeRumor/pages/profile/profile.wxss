@@ -10,30 +10,30 @@ page{
   position: relative;
 }
 .profile-login{
-  height: 80px;
+  height: 200rpx;
   background-color: #ffffff;
   border: 2rpx solid #f1f1f1
 }
 .login-pic{
-  height: 50px;
-  width: 50px;
+  height: 100rpx;
+  width: 100rpx;
   border-radius: 50%;
   background-color: #b5e3f5;
   border: 2rpx solid #f1f1f1;
   position: absolute;
   left: 40rpx;
-  top: 36rpx;
+  top: 60rpx;
   overflow: hidden;
 }
 .icon-user{
-  font-size: 40px;
+  font-size: 80rpx;
   color: #f1f1f1;
   position: absolute;
   left: 10rpx;
   top: 4rpx;
 }
 .profile-name{
-  line-height: 180rpx;
+  line-height: 200rpx;
   position: absolute;
   left: 180rpx;
   font-weight: 400;
@@ -41,38 +41,38 @@ page{
 }
 .profile-login .icon-youjiantou{
   float: right;
-  line-height: 160rpx;
-  margin-right: 10rpx;
+  line-height: 200rpx;
+  margin-right: 30rpx;
   color: #ccc;
 }
 .my-collection{
-  height: 100rpx;
+  height: 140rpx;
   background-color: #ffffff;
   border: 2rpx solid #f1f1f1
 }
 .my-collection text{
-  line-height: 100rpx;
+  line-height: 140rpx;
   padding-left: 40rpx;
 }
 .my-collection .icon-youjiantou{
   float: right;
-  line-height: 100rpx;
-  margin-right: 10rpx;
+  line-height: 140rpx;
+  margin-right: 30rpx;
   color: #ccc;
 }
 .suggestion{
-  height: 50px;
+  height: 140rpx;
   background-color: #ffffff;
   border: 2rpx solid #f1f1f1
 }
 .suggestion text{
-  line-height: 100rpx;
+  line-height: 140rpx;
   padding-left: 40rpx;
 }
 .suggestion .icon-youjiantou{
   float: right;
-  line-height: 100rpx;
-  margin-right: 10rpx;
+  line-height: 140rpx;
+  margin-right: 30rpx;
   color: #ccc;
 }
 image{
@@ -81,5 +81,4 @@ image{
   width: 120rpx;
   height: 120rpx;
   z-index: 999;
-  left: 1rpx;
 }
