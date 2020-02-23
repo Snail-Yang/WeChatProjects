@@ -23,9 +23,12 @@ Page({
       curIndex: e.detail.current
     })
   },
-
+  //页面跳转
+  enterSearch() {
+    app.toSearch();
+  },
   enterDetail() {
-    switch(this.data.curIndex) {
+    switch (this.data.curIndex) {
       case 0:
         app.toHot_rumor();
         break;

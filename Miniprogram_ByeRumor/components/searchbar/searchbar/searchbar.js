@@ -108,7 +108,7 @@ Component({
         },
         placeholder: {
             type: String,
-          value: '输入要搜索的内容'
+          value: '搜索'
         },
         value: {
             type: String,
@@ -135,15 +135,15 @@ Component({
         result: []
     },
     lastSearch: Date.now(),
-    lifetimes: {
-        attached: function attached() {
-            if (this.data.focus) {
-                this.setData({
-                    searchState: true
-                });
-            }
-        }
-    },
+    // lifetimes: {
+    //     attached: function attached() {
+    //         if (this.data.focus) {
+    //             this.setData({
+    //                 searchState: true
+    //             });
+    //         }
+    //     }
+    // },
     methods: {
         clearInput: function clearInput() {
             this.setData({
@@ -160,17 +160,17 @@ Component({
             });
             this.triggerEvent('blur', e.detail);
         },
-        showInput: function showInput() {
-            this.setData({
-                focus: true,
-                searchState: true
-            });
-        },
-        hideInput: function hideInput() {
-            this.setData({
-                searchState: false
-            });
-        },
+        // showInput: function showInput() {
+        //     this.setData({
+        //         focus: true,
+        //         searchState: true
+        //     });
+        // },
+        // hideInput: function hideInput() {
+        //     this.setData({
+        //         searchState: false
+        //     });
+        // },
         inputChange: function inputChange(e) {
             var _this = this;
 

@@ -1,47 +1,66 @@
-.tabWrapper{
+.searchWrapper {
+  height: 100rpx;
+  box-sizing: border-box;
+  padding: 20rpx 30rpx;
+}
+
+.searchWrapper .searchBtn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60rpx;
+  border: solid 2rpx #ddd;
+  border-radius: 6rpx;
+  padding: 0 20rpx 0 38rpx;
+  color: #aaa;
+  font-size: 28rpx;
+}
+
+.searchWrapper .searchBtn icon {
+  margin-right: 0;
+}
+
+.tabWrapper {
   display: flex;
   justify-content: space-around;
   height: 65rpx;
   padding-top: 15rpx;
-  border-top: solid 2rpx #aaaaaa;
-  border-bottom: solid 1rpx #dddddd;
+  border-top: solid 3rpx #aaa;
+  border-bottom: solid 2rpx #ddd;
   font-size: 28rpx;
   color: #7f7f7f;
 }
 
-.tab{
+.tab {
   height: 45rpx;
 }
 
-.tabSelected{
-  border-bottom: solid 5rpx #3A9BD5;
+.tabSelected {
+  border-bottom: solid 5rpx #3a9bd5;
 }
 
-swiper .dataWrapper{
+swiper .dataWrapper .info {
   display: flex;
+  height: 205rpx;
 }
 
-swiper .dataWrapper .sideBar{
+swiper .dataWrapper .info .sideBar {
   width: 25rpx;
 }
 
-swiper .dataWrapper .ruBar{
-background-color: #CD672F;
+swiper .dataWrapper .info .ruBar {
+  background-color: #cd672f;
 }
 
-swiper .dataWrapper .scBar{
-background-color: #FACC48
+swiper .dataWrapper .info .scBar {
+  background-color: #facc48;
 }
 
-swiper .dataWrapper .dyBar{
-background-color: #3499F7;
+swiper .dataWrapper .info .dyBar {
+  background-color: #3499f7;
 }
 
-swiper .dataWrapper .infoWrapper{
+swiper .dataWrapper .info .infoItem {
   flex-grow: 1;
-}
-
-swiper .dataWrapper .infoWrapper .info{
-  height: 205rpx;
   border-bottom: solid 5rpx #e3e3e3;
 }

@@ -1,0 +1,13 @@
+.tabWrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 60rpx;
+  border-bottom: solid 2rpx #ddd;
+  font-size: 24rpx;
+  color: #7f7f7f;
+}
+
+.tab {
+  height: 30rpx;
+}
