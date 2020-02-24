@@ -21,11 +21,19 @@
       </view>
     </view>
   </view>
-<!-- 搜索输入页面 -->
-<view wx:if="{{showSearch}}">
-Searching Page
-</view>
-<!-- 搜索结果页面 -->
+  <!-- 搜索输入页面 -->
+  <view wx:if="{{showSearch}}">
+    <view class="filterWrapper">
+      <view wx:for="{{filteredData}}" class="filteredData" wx:key="index" data-index="{{index}}">
+        <view class="filteredItem">
+          <icon type="search"></icon>
+          <view >{{item}}</view>
+        </view>
+        <view class="truth">{{truth}}</view>
+      </view>
+    </view>
+  </view>
+  <!-- 搜索结果页面 -->
   <view wx:if="{{showResult}}">
     <view class="tabWrapper">
       <view wx:for="{{tabTitles}}" class="tab {{index == curIndex ? 'tabSelected':''}}" data-index="{{index}}" wx:key="index" bindtap="tabHandler">{{item}}</view>

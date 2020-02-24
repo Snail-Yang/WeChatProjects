@@ -5,8 +5,8 @@ Page({
    */
   data: {
     searchValue: "",
-    showHistory: true,
-    showSearch: false,
+    showHistory: false,
+    showSearch: true,
     showResult: false,
     tabTitles: ["显示全部", "热门谣言", "防疫科普", "官方动态"],
     history: ["防疫种类", "防疫手段", "口罩", "酒精喷雾", "新增确诊", "国外疫情"],
@@ -21,7 +21,7 @@ Page({
       "99.7的无水乙醇可以稀释到75%后做消毒用",
       "99.7的无水乙醇可以稀释到75%后做消毒用"
     ],
-
+    filteredData: ["新型疫苗出来啦", "新型疫苗出来啦", "新型疫苗出来啦", "新型疫苗出来啦", "新型疫苗出来啦", "新型疫苗出来啦"],
     clientHeight: "",
     searchHeight: "",
     tabHeight: "",
@@ -59,7 +59,7 @@ Page({
   },
   //搜索结果页面事件
   //判断是否有搜索结果
-  
+
   enterResult(e) {
     const self = this;
     //获取搜索栏高度

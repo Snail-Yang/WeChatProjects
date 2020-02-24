@@ -1,7 +1,8 @@
-/* 失去焦点页面样式 */
+/* 搜索历史页面 */
+
 .historyWrapper {
-  border-top: solid 2rpx #bbbbbb;
-  border-bottom: solid 2rpx #bbbbbb;
+  border-top: solid 2rpx #bbb;
+  border-bottom: solid 2rpx #bbb;
 }
 
 .historyWrapper .historyTitle {
@@ -18,13 +19,13 @@
   font-size: 24rpx;
 }
 
-.historyWrapper .historyItems{
+.historyWrapper .historyItems {
   display: flex;
   flex-wrap: wrap;
   padding-left: 16rpx;
 }
 
-.historyWrapper .historyItems view{
+.historyWrapper .historyItems view {
   height: 50rpx;
   margin-right: 16rpx;
   margin-bottom: 10rpx;
@@ -36,28 +37,58 @@
   font-size: 24rpx;
 }
 
-.rankingWrapper .titleText{
+.rankingWrapper .titleText {
   padding: 12rpx 22rpx;
 }
 
-.rankingWrapper .rankingList{
+.rankingWrapper .rankingList {
   display: flex;
   padding: 12rpx 22rpx;
-  border-bottom: solid 2rpx #bbbbbb;
+  border-bottom: solid 2rpx #bbb;
   font-size: 31rpx;
 }
 
-.rankingWrapper .rankingList .rankingNum{
+.rankingWrapper .rankingList .rankingNum {
   width: 40rpx;
   height: 40rpx;
   margin-right: 60rpx;
   background-color: red;
   text-align: center;
   line-height: 40rpx;
-  color: #ffffff;
+  color: #fff;
 }
 
-/* 获取焦点页面样式 */
+/* 搜索输入页面 */
+
+.filterWrapper {
+  border-top: solid 3rpx #ccc;
+  padding: 4rpx 38rpx;
+}
+
+.filteredData {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32rpx 22rpx;
+  border-bottom: solid 3rpx #bbb;
+}
+
+.filteredItem {
+  display: flex;
+}
+
+.filteredItem icon{
+  margin-right: 18rpx;
+}
+
+.truth {
+  width: 70rpx;
+  height: 35rpx;
+  background-color: blue;
+}
+
+/* 搜索结果页面 */
+
 .tabWrapper {
   display: flex;
   justify-content: space-around;
