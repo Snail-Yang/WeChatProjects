@@ -5,8 +5,7 @@ data:{
 textareaInput: function (e) {
     this.setData({
       content: e.detail.value
-    })
-
+    })    
 },
 submit:function (){
   if (this.data.content == ''){

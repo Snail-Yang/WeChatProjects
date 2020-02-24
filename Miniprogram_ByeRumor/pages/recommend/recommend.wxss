@@ -24,9 +24,7 @@ page{
 }
 .recommend-submit{
   margin-top: 100rpx;
-  width: 400rpx;
   height: 100rpx;
+  width: 400rpx;
   line-height: 100rpx;
-  background-color: green;
-  color: white;
 }
