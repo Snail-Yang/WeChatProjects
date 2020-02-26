@@ -10,14 +10,16 @@
   wx:if="{{!focus && !inputValue}}"
   hisList="{{hisList}}"
   rankList="{{rankList}}"
-  bind:selectIndex="selectIndex"
+  bind:selectHis="selectHis"
   bind:deleteHis="deleteHis"
+  bind:selectRank="selectRank"
   >
   </searchHistory>
 
   <searchState
   wx:if="{{focus || inputValue}}"
   keyWords="{{keyWords}}"
+  bind:selectResult="selectResult"
   >
   </searchState>
 

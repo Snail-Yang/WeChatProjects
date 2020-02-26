@@ -26,10 +26,17 @@ Component({
    */
   methods: {
     selectHistory(e) {
-      this.triggerEvent("selectIndex", e.currentTarget.dataset.index);
+      const index = e.currentTarget.dataset.index;
+      const item = this.data.hisList[index]
+      this.triggerEvent("selectHis", {item, index});
     },
     deleteHistory() {
       this.triggerEvent("deleteHis");
+    },
+    selectRanking(e){
+      const index = e.currentTarget.dataset.index;
+      const item = this.data.rankList[index]
+      this.triggerEvent("selectRank", { item, index });
     }
   }
 })

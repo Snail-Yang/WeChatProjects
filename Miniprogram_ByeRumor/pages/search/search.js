@@ -31,18 +31,17 @@ Page({
 
     curIndex: 0,
     tabTitles: ["显示全部", "热门谣言", "防疫科普", "官方动态"],
-    // 搜索历史
     hisList: ["防疫种类", "防疫手段", "口罩", "酒精喷雾", "新增确诊", "国外疫情"],
     rankList: ["99.7的无水乙醇可以稀释到75%后做消毒用",
       "99.7的无水乙醇可以稀释到75%后做消毒用",
     ],
   },
+  //
 
   // 搜索历史页面事件
-  selectIndex(e) {
-    const his = this.data.hisList[e.detail];
+  selectHis(e) {
     this.setData({
-      inputValue: his
+      inputValue: e.detail.item
     })
   },
   deleteHis() {
@@ -50,22 +49,23 @@ Page({
       hisList: []
     })
   },
-
-  //搜索输入页面事件
+  selectRank(e){
+    this.setData({
+      inputValue: e.detail.item
+    })
+  },
+  //得失焦点
   inputFocus() {
     this.setData({
       focus: true,
     })
-    // let li = ["1","2"];
-    // li = li.filter(item=>item.includes(''));
-    // console.log(li);
   },
   inputBlur() {
     this.setData({
       focus: false,
     })
   },
-
+  // 搜索匹配
   lastSearch: Date.now(),
   throttle: 300,
   inputChange(e) {
@@ -96,12 +96,15 @@ Page({
       }, this.throttle);
     }
   },
-  //搜索结果页面事件
-  //判断是否有搜索结果
+  //匹配结果选择
   selectResult(e) {
-    console.log(e.detail.item);
+    this.setData({
+      inputValue: e.detail.item.text
+    })
   },
-  enterResult(e) {
+
+
+  setResultPage(e) {
     const _this = this;
     //获取搜索栏高度
     app.getElementStyle(".searchWrapper", rect => {

@@ -11,7 +11,7 @@
     </view>
     <view class="rankingWrapper">
       <view class="titleText">谣言排行榜</view>
-      <view wx:for="{{rankList}}" class="rankingList" wx:key="index" data-index="{{index}}">
+      <view wx:for="{{rankList}}" class="rankingList" wx:key="index" data-index="{{index}}" bindtap="selectRanking">
         <view class="rankingNum">{{index+1}}</view>
         <view class="rankingItem">{{item}}</view>
       </view>
