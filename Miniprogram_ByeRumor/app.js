@@ -3,15 +3,20 @@ App({
   //全局数据
   data: {
     rumors: [{
-      content: 1,
+      text: "新型肺炎疫苗出来啦",
+      type: "ru"
+    },
+    {
+      text: "高温杀死新型肺炎病毒",
       type: "ru"
     }, {
-      content: 2,
-      type: "ru"
+      text: "出门需带口罩",
+      type: "sc"
     }, {
-      content: 3,
-      type: "ru"
-    }],
+      text: "广东连续3天无新增确诊",
+      type: "dy"
+    }
+    ],
 
     science: [{
       content: 1,
@@ -40,21 +45,6 @@ App({
     wx.createSelectorQuery().select(ele).boundingClientRect(callBack).exec();
   },
   //路由跳转
-  toSearch() {
-    wx.navigateTo({
-      url: '../search/search',
-      events: {
-        getData() {
-          console.log("Data");
-        }
-      },
-      success(res) {
-        res.eventChannel.emit("getData", {
-          data: 0
-        })
-      }
-    })
-  },
   toHot_rumor() {
     wx.navigateTo({
       url: '../hot_rumor/hot_rumor',

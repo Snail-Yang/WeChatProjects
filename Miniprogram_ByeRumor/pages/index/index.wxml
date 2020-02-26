@@ -1,11 +1,11 @@
 <view class="container">
   <view class="searchWrapper">
-    <view class="searchBtn" bindtap="enterSearch">
+    <navigator url="../search/search">
       <text>输入要搜索的内容</text>
       <icon type="search" size="20"></icon>
-    </view>
+    </navigator>
   </view>
-  
+
   <view class="tabWrapper">
     <view wx:for="{{tabTitles}}" class="tab {{index == curIndex ? 'tabSelected':''}}" data-index="{{index}}" wx:key="index" bindtap="tabHandler">{{item}}</view>
   </view>

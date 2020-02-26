@@ -24,9 +24,6 @@ Page({
     })
   },
   //页面跳转
-  enterSearch() {
-    app.toSearch();
-  },
   enterDetail() {
     switch (this.data.curIndex) {
       case 0:

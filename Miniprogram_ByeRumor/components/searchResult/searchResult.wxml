@@ -1,0 +1,54 @@
+  <!-- 搜索结果页面 -->
+  <view wx:if="{{showResult}}">
+    <view class="tabWrapper">
+      <view wx:for="{{tabTitles}}" class="tab {{index == curIndex ? 'tabSelected':''}}" data-index="{{index}}" wx:key="index" bindtap="tabHandler">{{item}}</view>
+    </view>
+
+    <swiper style="height:{{clientHeight-searchHeight-tabHeight+'px'}}" current="{{curIndex}}" bindchange="curChange">
+
+      <swiper-item>
+        <scroll-view scroll-y="{{true}}" style="height:{{clientHeight-searchHeight-tabHeight+'px'}}">
+          <view class="dataWrapper">
+            <view class="info" wx:for="{{rumors}}" data-index="{{index}}" wx:key="index" bindtap="enterDetail">
+              <view class="sideBar ruBar"></view>
+              <view class="infoItem">{{item.content}}</view>
+            </view>
+          </view>
+        </scroll-view>
+      </swiper-item>
+
+      <swiper-item>
+        <scroll-view scroll-y="{{true}}" style="height:{{clientHeight-searchHeight-tabHeight+'px'}}">
+          <view class="dataWrapper">
+            <view class="info" wx:for="{{rumors}}" data-index="{{index}}" wx:key="index" bindtap="enterDetail">
+              <view class="sideBar ruBar"></view>
+              <view class="infoItem">{{item.content}}</view>
+            </view>
+          </view>
+        </scroll-view>
+      </swiper-item>
+
+      <swiper-item>
+        <scroll-view scroll-y="{{true}}" style="height:{{clientHeight-searchHeight-tabHeight+'px'}}">
+          <view class="dataWrapper">
+            <view class="info" wx:for="{{science}}" data-index="{{index}}" wx:key="index" bindtap="enterDetail">
+              <view class="sideBar scBar"></view>
+              <view class="infoItem">{{item.content}}</view>
+            </view>
+          </view>
+        </scroll-view>
+      </swiper-item>
+
+      <swiper-item>
+        <scroll-view scroll-y="{{true}}" style="height:{{clientHeight-searchHeight-tabHeight+'px'}}">
+          <view class="dataWrapper">
+            <view class="info" wx:for="{{dynamic}}" data-index="{{index}}" wx:key="index" bindtap="enterDetail">
+              <view class="sideBar dyBar"></view>
+              <view class="infoItem">{{item.content}}</view>
+            </view>
+          </view>
+        </scroll-view>
+      </swiper-item>
+    </swiper>
+
+  </view>

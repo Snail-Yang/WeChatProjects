@@ -1,134 +1,24 @@
-/* 搜索历史页面 */
-
-.historyWrapper {
-  border-top: solid 2rpx #bbb;
-  border-bottom: solid 2rpx #bbb;
+.searchWrapper {
+  height: 100rpx;
+  box-sizing: border-box;
+  padding: 20rpx 30rpx;
 }
 
-.historyWrapper .historyTitle {
+.searchWrapper .searchBar {
   display: flex;
   justify-content: space-between;
-  padding: 12rpx 22rpx;
-}
-
-.historyWrapper .historyTitle .titleText {
-  font-size: 28rpx;
-}
-
-.historyWrapper .historyTitle .titleBtn {
-  font-size: 24rpx;
-}
-
-.historyWrapper .historyItems {
-  display: flex;
-  flex-wrap: wrap;
-  padding-left: 16rpx;
-}
-
-.historyWrapper .historyItems view {
-  height: 50rpx;
-  margin-right: 16rpx;
-  margin-bottom: 10rpx;
-  padding: 6rpx 48rpx;
-  border-radius: 50rpx;
-  background-color: #f2f2f2;
-  line-height: 50rpx;
-  text-align: center;
-  font-size: 24rpx;
-}
-
-.rankingWrapper .titleText {
-  padding: 12rpx 22rpx;
-}
-
-.rankingWrapper .rankingList {
-  display: flex;
-  padding: 12rpx 22rpx;
-  border-bottom: solid 2rpx #bbb;
-  font-size: 31rpx;
-}
-
-.rankingWrapper .rankingList .rankingNum {
-  width: 40rpx;
-  height: 40rpx;
-  margin-right: 60rpx;
-  background-color: red;
-  text-align: center;
-  line-height: 40rpx;
-  color: #fff;
-}
-
-/* 搜索输入页面 */
-
-.filterWrapper {
-  border-top: solid 3rpx #ccc;
-  padding: 4rpx 38rpx;
-}
-
-.filteredData {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 32rpx 22rpx;
-  border-bottom: solid 3rpx #bbb;
-}
-
-.filteredItem {
-  display: flex;
-}
-
-.filteredItem icon{
-  margin-right: 18rpx;
-}
-
-.truth {
-  width: 70rpx;
-  height: 35rpx;
-  background-color: blue;
-}
-
-/* 搜索结果页面 */
-
-.tabWrapper {
-  display: flex;
-  justify-content: space-around;
   align-items: center;
   height: 60rpx;
-  border-bottom: solid 2rpx #ddd;
-  font-size: 24rpx;
-  color: #7f7f7f;
+  border: solid 2rpx #ddd;
+  border-radius: 6rpx;
+  padding: 0 28rpx 0 28rpx;
+  color: #aaa;
+  font-size: 28rpx;
 }
-
-.tab {
-  height: 38rpx;
+.searchWrapper .searchBar input{
+  width: 100%;
+  height: 100%;
 }
-
-.tabSelected {
-  border-bottom: solid 4rpx #3a9bd5;
-}
-
-swiper .dataWrapper .info {
-  display: flex;
-  height: 205rpx;
-}
-
-swiper .dataWrapper .info .sideBar {
-  width: 25rpx;
-}
-
-swiper .dataWrapper .info .ruBar {
-  background-color: #cd672f;
-}
-
-swiper .dataWrapper .info .scBar {
-  background-color: #facc48;
-}
-
-swiper .dataWrapper .info .dyBar {
-  background-color: #3499f7;
-}
-
-swiper .dataWrapper .info .infoItem {
-  flex-grow: 1;
-  border-bottom: solid 5rpx #e3e3e3;
+.searchWrapper .searchBar icon {
+  margin-right: 0;
 }
