@@ -10,10 +10,15 @@
 
 .tab {
   height: 38rpx;
+  border-bottom: solid 4rpx;
 }
 
-.tabSelected {
-  border-bottom: solid 4rpx #3a9bd5;
+.selected {
+  border-color: #3a9bd5;
+}
+
+.unSelected {
+  border-color: #fff;
 }
 
 swiper .dataWrapper .info {

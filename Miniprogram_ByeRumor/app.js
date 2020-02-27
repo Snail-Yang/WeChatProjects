@@ -45,10 +45,10 @@ App({
       text: 3,
       type: "dy"
     },
-      {
-        text: 3,
-        type: "dy"
-      }],
+    {
+      text: 3,
+      type: "dy"
+    }],
   },
   //路由跳转
   toHot_rumor() {

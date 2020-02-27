@@ -50,6 +50,9 @@ Component({
         currentIndex: e.detail.current
       })
     },
+    enterDetail(){
+      console.log("跳转");
+    }
   },
   ready: function() {
     //获取屏幕剩余高度

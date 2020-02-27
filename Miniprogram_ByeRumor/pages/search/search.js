@@ -8,7 +8,7 @@ Page({
     placeholder: "搜索的内容",
     focus: false,
     searchState: false,
-    searchResult: true,
+    searchResult: false,
     keyWords: [],
 
 
@@ -20,19 +20,19 @@ Page({
     science: app.data.science,
     dynamic: app.data.dynamic,
     result: [{
-      text: "新型肺炎疫苗出来啦",
-      type: "ru"
-    },
-    {
-      text: "高温杀死新型肺炎病毒",
-      type: "ru"
-    }, {
-      text: "出门需带口罩",
-      type: "sc"
-    }, {
-      text: "广东连续3天无新增确诊",
-      type: "dy"
-    }
+        text: "新型肺炎疫苗出来啦",
+        type: "ru"
+      },
+      {
+        text: "高温杀死新型肺炎病毒",
+        type: "ru"
+      }, {
+        text: "出门需带口罩",
+        type: "sc"
+      }, {
+        text: "广东连续3天无新增确诊",
+        type: "dy"
+      }
     ],
   },
 
@@ -46,6 +46,7 @@ Page({
   inputFocus() {
     this.setData({
       focus: true,
+      searchResult: false,
     })
   },
   inputBlur() {
@@ -86,13 +87,14 @@ Page({
   },
   //搜索关键字选择
   selectResult(e) {
-    console.log(e.detail.item);
+    console.log(e);
     this.setData({
       focus: false,
       searchState: false,
       searchResult: true,
-      // inputValue: e.detail.item.text
+      inputValue: e.detail.item
     })
+    console.log("匹配结果搜索");
   },
 
   /**
