@@ -35,7 +35,7 @@
   height: 45rpx;
 }
 
-.tabSelected {
+.selected {
   border-bottom: solid 5rpx #3a9bd5;
 }
 
