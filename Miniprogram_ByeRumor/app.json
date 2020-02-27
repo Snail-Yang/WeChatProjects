@@ -1,12 +1,12 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/search/search",
     "pages/quiz/quiz",
     "pages/me/me",
     "pages/hot_rumor/hot_rumor",
     "pages/antiepic_science/antiepic_science",
-    "pages/offic_dynamic/offic_dynamic",
-    "pages/search/search"
+    "pages/offic_dynamic/offic_dynamic"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",

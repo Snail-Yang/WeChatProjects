@@ -28,7 +28,7 @@ Component({
     selectHistory(e) {
       const index = e.currentTarget.dataset.index;
       const item = this.data.hisList[index]
-      this.triggerEvent("selectHis", {item, index});
+      this.triggerEvent("selectResult", {item, index});
     },
     deleteHistory() {
       this.triggerEvent("deleteHis");
@@ -36,7 +36,7 @@ Component({
     selectRanking(e){
       const index = e.currentTarget.dataset.index;
       const item = this.data.rankList[index]
-      this.triggerEvent("selectRank", { item, index });
+      this.triggerEvent("selectResult", { item, index });
     }
   }
 })

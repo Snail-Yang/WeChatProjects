@@ -3,46 +3,52 @@ App({
   //全局数据
   data: {
     rumors: [{
-      text: "新型肺炎疫苗出来啦",
-      type: "ru"
-    },
-    {
-      text: "高温杀死新型肺炎病毒",
-      type: "ru"
-    }, {
-      text: "出门需带口罩",
-      type: "sc"
-    }, {
-      text: "广东连续3天无新增确诊",
-      type: "dy"
-    }
+        text: "新型肺炎疫苗出来啦",
+        type: "ru"
+      },
+      {
+        text: "高温杀死新型肺炎病毒",
+        type: "ru"
+      }, {
+        text: "出门需带口罩",
+        type: "sc"
+      }, {
+        text: "广东连续3天无新增确诊",
+        type: "dy"
+      }
     ],
 
     science: [{
-      content: 1,
+      text: 1,
       type: "sc"
     }, {
-      content: 2,
+      text: 2,
       type: "sc"
     }, {
-      content: 3,
+      text: 3,
       type: "sc"
     }],
 
     dynamic: [{
-      content: 1,
+      text: 1,
       type: "dy"
     }, {
-      content: 2,
+      text: 2,
       type: "dy"
     }, {
-      content: 3,
+      text: 3,
       type: "dy"
-    }],
-  },
-  //公共方法
-  getElementStyle(ele, callBack) {
-    wx.createSelectorQuery().select(ele).boundingClientRect(callBack).exec();
+    }, {
+      text: 3,
+      type: "dy"
+    }, {
+      text: 3,
+      type: "dy"
+    },
+      {
+        text: 3,
+        type: "dy"
+      }],
   },
   //路由跳转
   toHot_rumor() {

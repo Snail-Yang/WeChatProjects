@@ -1,6 +1,6 @@
 {
   "usingComponents": {
-    "searchHistory":"../../components/searchHistory/searchHistory",
+    "searchHistory": "../../components/searchHistory/searchHistory",
     "searchState": "../../components/searchState/searchState",
     "searchResult": "../../components/searchResult/searchResult"
   }

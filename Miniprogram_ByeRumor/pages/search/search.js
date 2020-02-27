@@ -4,54 +4,42 @@ Page({
    * 页面的初始数据
    */
   data: {
-    clientHeight: "",
-    searchHeight: "",
-    tabHeight: "",
-
     inputValue: "",
     placeholder: "搜索的内容",
     focus: false,
     searchState: false,
+    searchResult: true,
     keyWords: [],
-    result: [{
-        text: "新型肺炎疫苗出来啦",
-        type: "ru"
-      },
-      {
-        text: "高温杀死新型肺炎病毒",
-        type: "ru"
-      }, {
-        text: "出门需带口罩",
-        type: "sc"
-      }, {
-        text: "广东连续3天无新增确诊",
-        type: "dy"
-      }
-    ],
 
-    curIndex: 0,
+
     tabTitles: ["显示全部", "热门谣言", "防疫科普", "官方动态"],
     hisList: ["防疫种类", "防疫手段", "口罩", "酒精喷雾", "新增确诊", "国外疫情"],
     rankList: ["99.7的无水乙醇可以稀释到75%后做消毒用",
       "99.7的无水乙醇可以稀释到75%后做消毒用",
     ],
+    science: app.data.science,
+    dynamic: app.data.dynamic,
+    result: [{
+      text: "新型肺炎疫苗出来啦",
+      type: "ru"
+    },
+    {
+      text: "高温杀死新型肺炎病毒",
+      type: "ru"
+    }, {
+      text: "出门需带口罩",
+      type: "sc"
+    }, {
+      text: "广东连续3天无新增确诊",
+      type: "dy"
+    }
+    ],
   },
-  //
 
-  // 搜索历史页面事件
-  selectHis(e) {
-    this.setData({
-      inputValue: e.detail.item
-    })
-  },
+  //删除搜索历史
   deleteHis() {
     this.setData({
       hisList: []
-    })
-  },
-  selectRank(e){
-    this.setData({
-      inputValue: e.detail.item
     })
   },
   //得失焦点
@@ -65,7 +53,7 @@ Page({
       focus: false,
     })
   },
-  // 搜索匹配
+  //搜索关键字匹配
   lastSearch: Date.now(),
   throttle: 300,
   inputChange(e) {
@@ -96,59 +84,17 @@ Page({
       }, this.throttle);
     }
   },
-  //匹配结果选择
+  //搜索关键字选择
   selectResult(e) {
+    console.log(e.detail.item);
     this.setData({
-      inputValue: e.detail.item.text
+      focus: false,
+      searchState: false,
+      searchResult: true,
+      // inputValue: e.detail.item.text
     })
   },
 
-
-  setResultPage(e) {
-    const _this = this;
-    //获取搜索栏高度
-    app.getElementStyle(".searchWrapper", rect => {
-      _this.setData({
-        cliente: {
-          searchHeight: rect.height
-        }
-      })
-    });
-    //获取导航栏高度
-    app.getElementStyle(".tabWrapper", rect => {
-      _this.setData({
-        cliente: {
-          tabHeight: rect.height
-        }
-
-      })
-    });
-    //获取可用高度
-    wx.getSystemInfo({
-      success: function(res) {
-        _this.setData({
-          cliente: {
-            clientHeight: res.windowHeight
-          }
-        });
-      }
-    });
-  },
-  //获取当前index
-  tabHandler(e) {
-    this.setData({
-      tabBar: {
-        curIndex: e.currentTarget.dataset.index
-      }
-    });
-  },
-  curChange(e) {
-    this.setData({
-      tabBar: {
-        curIndex: e.currentTarget.dataset.index
-      }
-    })
-  },
   /**
    * 生命周期函数--监听页面加载
    */

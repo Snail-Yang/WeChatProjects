@@ -21,7 +21,7 @@ Component({
    * 组件的方法列表
    */
   methods: {
-    selectResult(e){
+    selectInput(e){
       const index = e.currentTarget.dataset.index;
       const item = this.data.keyWords[index];
       this.triggerEvent("selectResult", {item, index});
