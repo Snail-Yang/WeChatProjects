@@ -1,16 +1,27 @@
 {
-	"miniprogramRoot": "Miniprogram_ByeRumor/",
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
 	"setting": {
 		"urlCheck": true,
 		"es6": true,
 		"postcss": true,
 		"minified": true,
 		"newFeature": true,
-		"enhance": true
+		"autoAudits": false,
+		"coverView": true,
+		"showShadowRootInWxmlPanel": true,
+		"scopeDataCheck": false
 	},
-	"appid": "wx28081468b65f172e",
-	"projectname": "Miniprogram_ByeRumor",
-	"libVersion": "2.8.1",
+	"compileType": "miniprogram",
+	"libVersion": "2.10.2",
+	"appid": "wx6d9fd5d6ffcd5958",
+	"projectname": "miniprogram-1",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
 	"simulatorType": "wechat",
 	"simulatorPluginLibVersion": {},
 	"condition": {
@@ -22,12 +33,13 @@
 			"current": -1,
 			"list": []
 		},
-		"plugin": {
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
 			"current": -1,
 			"list": []
-		},
-		"game": {
-			"list": []
-		},
+		}
 	}
 }
