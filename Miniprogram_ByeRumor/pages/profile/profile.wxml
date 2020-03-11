@@ -1,4 +1,5 @@
 <!--pages/me/me.wxml-->
+
 <view class="profile-container">
   <view class="profile-login" bindtap="goToLogin">
     <view class="login-pic">
@@ -21,3 +22,4 @@
     </view>
   </navigator>
 </view>
+

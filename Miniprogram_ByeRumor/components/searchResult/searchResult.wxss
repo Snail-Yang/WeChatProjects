@@ -1,42 +1,24 @@
-.searchWrapper {
-  height: 100rpx;
-  box-sizing: border-box;
-  padding: 20rpx 30rpx;
-}
-
-.searchWrapper navigator {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 60rpx;
-  border: solid 2rpx #ddd;
-  border-radius: 6rpx;
-  padding: 0 28rpx 0 28rpx;
-  color: #aaa;
-  font-size: 28rpx;
-}
-
-.searchWrapper navigator icon {
-  margin-right: 0;
-}
-
 .tabWrapper {
   display: flex;
   justify-content: space-around;
-  height: 65rpx;
-  padding-top: 15rpx;
-  border-top: solid 3rpx #aaa;
+  align-items: center;
+  height: 60rpx;
   border-bottom: solid 2rpx #ddd;
-  font-size: 28rpx;
+  font-size: 24rpx;
   color: #7f7f7f;
 }
 
 .tab {
-  height: 45rpx;
+  height: 38rpx;
+  border-bottom: solid 4rpx;
 }
 
 .selected {
-  border-bottom: solid 5rpx #3a9bd5;
+  border-color: #3a9bd5;
+}
+
+.unSelected {
+  border-color: #fff;
 }
 
 swiper .dataWrapper .info {

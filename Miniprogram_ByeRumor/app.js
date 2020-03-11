@@ -1,14 +1,54 @@
 //app.js
 App({
   //全局数据
-  data:{
-    rumors: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
-    science: ["S1", "S2", "S3", "S4", "S5", "S6", "S7", "S8"],
-    dynamic: ["D1", "D2", "D3", "D4", "D5", "D6", "D7", "D8"]
-  },
-  //公共方法
-  getElementStyle(ele, callBack) {
-    wx.createSelectorQuery().select(ele).boundingClientRect(callBack).exec();
+  data: {
+    rumors: [{
+        text: "新型肺炎疫苗出来啦",
+        type: "ru"
+      },
+      {
+        text: "高温杀死新型肺炎病毒",
+        type: "ru"
+      }, {
+        text: "出门需带口罩",
+        type: "sc"
+      }, {
+        text: "广东连续3天无新增确诊",
+        type: "dy"
+      }
+    ],
+
+    science: [{
+      text: 1,
+      type: "sc"
+    }, {
+      text: 2,
+      type: "sc"
+    }, {
+      text: 3,
+      type: "sc"
+    }],
+
+    dynamic: [{
+      text: 1,
+      type: "dy"
+    }, {
+      text: 2,
+      type: "dy"
+    }, {
+      text: 3,
+      type: "dy"
+    }, {
+      text: 3,
+      type: "dy"
+    }, {
+      text: 3,
+      type: "dy"
+    },
+    {
+      text: 3,
+      type: "dy"
+    }],
   },
   //路由跳转
   toHot_rumor() {

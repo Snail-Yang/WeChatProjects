@@ -6,26 +6,26 @@ Page({
     searchHeight: "",
     tabHeight: "",
     tabTitles: ["热门谣言", "防疫科普", "官方动态"],
-    curIndex: 0,
+    currentIndex: 0,
     rumors: app.data.rumors,
     science: app.data.science,
     dynamic: app.data.dynamic
   },
 
-  tabHandler(e) {
+  tabChange(e) {
     this.setData({
-      curIndex: e.currentTarget.dataset.index
+      currentIndex: e.currentTarget.dataset.index
     });
   },
 
-  curChange(e) {
+  slideChange(e) {
     this.setData({
-      curIndex: e.detail.current
+      currentIndex: e.detail.current
     })
   },
-
+  //页面跳转
   enterDetail() {
-    switch(this.data.curIndex) {
+    switch (this.data.currentIndex) {
       case 0:
         app.toHot_rumor();
         break;
@@ -41,27 +41,25 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-    const self = this;
-    //获取搜索栏高度
-    app.getElementStyle(".searchWrapper", rect => {
-      self.setData({
+    //获取屏幕剩余高度
+    const _this = this;
+    wx.createSelectorQuery().select(".searchWrapper").boundingClientRect(rect => {
+      _this.setData({
         searchHeight: rect.height
-      })
-    });
-    //获取导航栏高度
-    app.getElementStyle(".tabWrapper", rect => {
-      self.setData({
+      });
+    }).exec();
+    wx.createSelectorQuery().select(".tabWrapper").boundingClientRect(rect => {
+      _this.setData({
         tabHeight: rect.height
-      })
-    });
-    //获取可用高度
+      });
+    }).exec();
     wx.getSystemInfo({
-      success: function(res) {
-        self.setData({
+      success: function (res) {
+        _this.setData({
           clientHeight: res.windowHeight
         });
-      },
-    })
+      }
+    });
   },
 
   /**
