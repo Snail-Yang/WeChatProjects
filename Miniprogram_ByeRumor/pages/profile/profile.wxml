@@ -3,10 +3,10 @@
 <view class="profile-container">
   <view class="profile-login" bindtap="goToLogin">
     <view class="login-pic">
-      <icon  class="icon iconfont icon-user"></icon>
-      <image src="{{userinfo.avatarUrl}}"></image>
+      <icon class="icon iconfont icon-user">{{}}</icon>
+      <image src="{{avatarUrl}}"></image>
     </view>
-    <text class="profile-name">{{userName}}</text>
+    <view class="profile-name">{{userName}}</view>
     <icon class="icon iconfont icon-youjiantou"></icon>
   </view>
   <navigator url="/pages/collection/collection">

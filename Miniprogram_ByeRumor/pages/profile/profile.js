@@ -4,8 +4,9 @@ Page({
    * 页面的初始数据
    */
   data: {
-    userinfo:{},
-    userName:''
+    userInfo:{},
+    userName:'',
+    avatarUrl:''
   },
   goToLogin: function(){
     // console.log('123')
@@ -17,32 +18,13 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-    const userinfo = wx.getStorageSync("userinfo");
-    this.setData({userinfo});
-  },
-  /**
- * 生命周期函数--监听页面初次渲染完成
- */
-  onReady: function () {
-    console.log(this.data.userinfo)
-    if (this.data.userinfo && this.data.userinfo.length !== 0) {
+    const userInfo = wx.getStorageSync('userInfo')
+    console.log(userInfo)
+    if (userInfo && userInfo.length !== 0) {
+      console.log(userInfo)
       this.setData({
-        userName: this.data.userName = this.data.userinfo.nickName
+        userName: this.data.userName = userInfo.nickName,
+        avatarUrl: this.data.avatarUrl = userInfo.avatarUrl
       })
     } else {
       this.setData({
@@ -50,8 +32,28 @@ Page({
       })
     }
     console.log(this.data.userName)
+  },
 
+  /**
+   * 生命周期函数--监听页面初次渲染完成
+   */
+  onReady: function () {
+    const userInfo = wx.getStorageSync("userInfo");
+    this.setData({ userInfo });
+    console.log(this.data.userInfo)
+  },
 
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow: function () {
+
+  },
+  /**
+ * 生命周期函数--监听页面初次渲染完成
+ */
+  onReady: function () {
+    
   },
 
   /**
